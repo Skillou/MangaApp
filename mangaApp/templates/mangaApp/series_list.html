@@ -25,7 +25,9 @@
             <div class="container-item">
                 <img src="{{ series.cover.url }}" alt="{{ series.cover.name }}">
                 <div class="name">
+                    <a href="{% url 'series_detail' series_id=series.id %}">Details Tomes</a>
                     <p class="name-manga">{{ series.title }}</p>
+                    <p>{{ series.title }}</p>
                 </div>
             </div>
         </div>
