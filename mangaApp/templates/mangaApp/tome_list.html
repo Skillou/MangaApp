@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Tome List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Number</th>
+        <th>Series</th>
+        <th>Cover</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tome in tomes %}
+        <tr>
+          <td>{{ tome.title }}</td>
+          <td>{{ tome.number }}</td>
+          <td>{{ tome.series.title }}</td>
+          <td><img src="{{ tome.cover.url }}"></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

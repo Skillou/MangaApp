@@ -1,0 +1,27 @@
+[
+    {
+        "model": "mangaApp.series",
+        "pk": 1,
+        "fields": {
+            "title": "One Piece",
+            "description": "Il s'agit d'une série de manga créée par Eiichirō Oda. Elle raconte les aventures d'un groupe de pirates mené par leur capitaine Monkey D. Luffy qui cherche à devenir le roi des pirates en trouvant le One Piece.",
+            "cover": "one_piece.jpg"
+        }
+    },
+    {
+        "model": "mangaApp.chapter",
+        "pk": 1,
+        "fields": {
+            "title": "Chapitre 1: L'équipage de Luffy",
+            "number": 1,
+            "series": 1
+        }
+    },
+    {
+        "model": "mangaApp.genre",
+        "pk": 1,
+        "fields": {
+            "name": "Aventure"
+        }
+    }
+]
