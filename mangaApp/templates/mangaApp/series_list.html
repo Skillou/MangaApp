@@ -4,36 +4,40 @@
 {% block content %}
     <h1>List of Series</h1>
 
-    {% for series in series_list %}
-        {#        <div class="card bg-light mb-3" style="min-width: 18rem;">#}
-        {#            <img class="card-img-top" src="{{ series.cover.url }}" alt="Card image cap">#}
-        {#            <div class="card-body">#}
-        {#                <h5 class="card-title">{{ series.title }}</h5>#}
-        {#                <p class="card-text">{{ series.author.name }}</p>#}
-        {#                <p class="card-text">{{ series.editor.name }}</p>#}
-        {#                <p>Genres:#}
-        {#                    {% for genre in series.genre.all %}{{ genre }}{% if not forloop.last %},#}
-        {#                    {% endif %}{% endfor %}</p>#}
-        {#                <button class="btn btn-primary">#}
-        {#                    <a href="{% url 'tome_list' series_id=series.id %}" style="color:white">Details Tomes</a>#}
-        {#                </button>#}
-        {#            </div>#}
-        {#        </div>#}
+    <div class="cards">
+        <h3>Movies</h3>
+        <h1>Popular</h1>
 
-        {#  Card des mangas #}
-        <div class="container-main">
-            <div class="container-item">
-                <img src="{{ series.cover.url }}" alt="{{ series.cover.name }}">
-                <div class="name">
-                    <a href="{% url 'series_detail' series_id=series.id %}">Details Tomes</a>
-                    <p class="name-manga">{{ series.title }}</p>
-                    <p>{{ series.title }}</p>
+        {% for series in series_list %}
+            {#        <div class="card bg-light mb-3" style="min-width: 18rem;">#}
+            {#            <img class="card-img-top" src="{{ series.cover.url }}" alt="Card image cap">#}
+            {#            <div class="card-body">#}
+            {#                <h5 class="card-title">{{ series.title }}</h5>#}
+            {#                <p class="card-text">{{ series.author.name }}</p>#}
+            {#                <p class="card-text">{{ series.editor.name }}</p>#}
+            {#                <p>Genres:#}
+            {#                    {% for genre in series.genre.all %}{{ genre }}{% if not forloop.last %},#}
+            {#                    {% endif %}{% endfor %}</p>#}
+            {#                <button class="btn btn-primary">#}
+            {#                    <a href="{% url 'tome_list' series_id=series.id %}" style="color:white">Details Tomes</a>#}
+            {#                </button>#}
+            {#            </div>#}
+            {#        </div>#}
+
+
+            <div class="cards-list">
+                <div class="card">
+                    <div class="card_image">
+                        <img src="{{ series.cover.url }}" alt="{{ series.cover.name }}"/>
+                    </div>
+                    <div class="card_title title-white">
+                        <p>{{ series.title }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-
-    {% endfor %}
+        {% endfor %}
+    </div>
 
 {% endblock %}
 

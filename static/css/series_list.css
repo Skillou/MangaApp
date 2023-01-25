@@ -1,120 +1,86 @@
-body {
-    margin: 0;
-    padding: 20px;
-    height: calc(100vh);
+h1 {
+    color: #3e3e42;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
 }
 
-.container-header {
-    color: #ff4f82;
-    display: flex;
-    justify-content: space-between;
+h3 {
+    color: #eb285d;
+    font-size: 16px;
+    margin-bottom: 6px;
 }
 
-.container-header .container-logo .logo {
-    font-size: 38px;
-    font-weight: 700;
-    font-style: italic;
+.cards {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px 20px rgba(0, 0, 0, 0.17);
+    display: inline-block;
+    margin: 2%;
+    padding: 30px 35px;
+    text-align: left;
+    transform-origin: 50% 50%;
+    min-width: 90%;
 }
 
-.container-header .container-logo .title {
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-.container-header .menu {
-    display: flex;
-    margin: 0;
-    align-items: center;
-}
-
-.container-header .menu li {
-    list-style: none;
-    font-size: 18px;
-    font-weight: 900;
-    font-style: italic;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.container-header .menu li:hover {
-    background: #19191a;
-    color: #ee8f2d;
-}
-
-.container-header .menu li:not(:last-child) {
-    margin-right: 30px;
-}
-
-.container-main {
-    display: flex;
-    justify-content: space-between;
-    height: 75vh;
-}
-
-.container-main .container-item {
-	border-radius: 2rem;
-    width: calc(33% - 10px);
-    height: 100%;
-    background: #19191a;
-    display: flex;
-    margin-top: 20px;
-    border-bottom: #ff4f82 5px solid;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.container-main .container-item:not(:last-child) {
-    margin-right: 20px;
-}
-
-.container-main .container-item img {
-    position: absolute;
-    height: 100%;
+.cards-list {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 30px auto;
+    width: 20rem;
+    height: 35rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 2rem;
+}
+
+.card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 2rem;
     object-fit: cover;
-    filter: grayscale(100%);
-    opacity: 0.5;
-    transition: opacity 0.2s 0.2s ease, filter 0.1s ease;
 }
 
-.container-main .container-item .name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    align-self: flex-end;
-    color: #5f6060;
-    font-size: 36px;
-    transition: 0.3s ease;
-    background: #19191a;
-    z-index: 2;
-}
-
-.container-main .container-item .name-manga {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.container-main .container-item:hover img {
-    filter: grayscale(0);
-    opacity: 0.8;
-}
-
-.container-main .container-item:hover .name {
-    color: #ee8f2d;
-}
-
-.container-main .container-item:active .name {
-    height: 50%;
-}
-
-.container-main .container-item:active .name-manga {
-    display: block;
-    opacity: 1;
-    color: #5f6060;
+.card .card_title {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
     font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+}
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 2px 2px 30px 15px rgba(0, 0, 0, 0.25),
+    -2px -2px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+    color: white;
+}
+
+.title-black {
+    color: black;
+}
+
+@media all and (max-width: 500px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
 }
