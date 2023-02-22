@@ -12,16 +12,27 @@ h3 {
     margin-bottom: 6px;
 }
 
-.cards {
+.container{
+    width: 100%;
+}
+
+.serie__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .cards {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 20px 20px rgba(0, 0, 0, 0.17);
     display: inline-block;
-    margin: 2%;
     padding: 30px 35px;
     text-align: left;
     transform-origin: 50% 50%;
-    min-width: 90%;
+    width: 100%;
 }
 
 .cards-list {
