@@ -1,3 +1,8 @@
+body {
+    background-color: #2fffc3;
+    background-image: linear-gradient(160deg, #2fffc3 0%, #ceffd9 100%);
+}
+
 h1 {
     color: #3e3e42;
     font-size: 32px;
@@ -12,7 +17,7 @@ h3 {
     margin-bottom: 6px;
 }
 
-.container{
+.container {
     width: 100%;
 }
 
@@ -43,6 +48,7 @@ h3 {
 }
 
 .card {
+    display: flex;
     margin: 30px auto;
     width: 20rem;
     height: 35rem;
